@@ -66,6 +66,7 @@ export function QuizForm() {
   const {
     register,
     control,
+    getValues,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = form;
@@ -183,12 +184,15 @@ export function QuizForm() {
                         className={styles.select}
                         value={field.type}
                         onChange={(event) => {
-                          // Замена вопроса целиком: поля ответа у типов не пересекаются
+                          // Замена вопроса целиком: поля ответа у типов не
+                          // пересекаются. Текст читаем через getValues: в
+                          // field он остаётся тем, что был на последнем
+                          // рендере useFieldArray, а не тем, что набрали.
                           update(
                             index,
                             emptyQuestion(
                               event.target.value as QuestionType,
-                              field.text,
+                              getValues(`questions.${index}.text`),
                             ),
                           );
                         }}
