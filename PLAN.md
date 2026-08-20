@@ -15,13 +15,13 @@
 ## Этап 2 — Backend
 
 - [x] `nest new backend`, вычистить шаблон (удалить `app.controller.ts` / `app.service.ts`)
-- [ ] Установить и настроить Prisma, описать `schema.prisma`
-- [ ] Первая миграция: `npx prisma migrate dev --name init`
-- [ ] `PrismaService` с `onModuleInit` + `PrismaModule`
-- [ ] `ZodValidationPipe` в `common/pipes/`
-- [ ] Zod-схемы в `quizzes/schemas/`, DTO-типы через `z.infer`
-- [ ] `QuizzesService` — четыре метода, `NotFoundException` на несуществующий id
-- [ ] `QuizzesController` — четыре роута, `@HttpCode(204)` на delete
+- [x] Установить и настроить Prisma, описать `schema.prisma`
+- [x] Первая миграция: `npx prisma migrate dev --name init`
+- [x] `PrismaService` с `onModuleInit` + `PrismaModule`
+- [x] `ZodValidationPipe` в `common/pipes/`
+- [x] Zod-схемы в `quizzes/schemas/`, DTO-типы через `z.infer`
+- [x] `QuizzesService` — четыре метода, `NotFoundException` на несуществующий id
+- [x] `QuizzesController` — четыре роута, `@HttpCode(204)` на delete
 - [ ] `main.ts`: CORS для `localhost:3000`, `ConfigModule`, порт из `.env`, **без глобального префикса**
 - [ ] `prisma/seed.ts` + скрипт `db:seed`, прогнать
 - [ ] Ручная проверка всех эндпоинтов (включая 404 и 204)
@@ -31,8 +31,8 @@
 ## Этап 3 — Frontend
 
 - [x] `create-next-app` (TypeScript, App Router, **без** Tailwind), вычистить шаблон
-- [ ] `styles/reset.css` + `styles/tokens.css`, подключить в `layout.tsx`
-- [ ] UI-примитивы: `Button`, `TextInput`, `Field`, `Card` — каждый со своим `.module.css`
+- [x] `styles/reset.css` + `styles/tokens.css`, подключить в `layout.tsx`
+- [x] UI-примитивы: `Button`, `TextInput`, `Field`, `Card` — каждый со своим `.module.css`
 - [ ] `services/http.ts` + `services/quizzes.ts`
 - [ ] `app/page.tsx` — редирект на `/quizzes`
 - [ ] Страница `/quizzes` — Server Component, `cache: 'no-store'`, empty-state

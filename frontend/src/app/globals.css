@@ -1,0 +1,29 @@
+/* Базовые стили приложения. Всё остальное — в *.module.css рядом с компонентами. */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-body);
+  line-height: var(--line-body);
+  font-weight: var(--weight-regular);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+::selection {
+  background-color: var(--color-primary-soft);
+}

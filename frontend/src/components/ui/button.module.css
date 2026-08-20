@@ -1,0 +1,78 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-height: var(--control-height);
+  padding: 0 var(--space-md);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: var(--font-body);
+  font-weight: var(--weight-medium);
+  line-height: var(--line-tight);
+  text-align: center;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition),
+    color var(--transition);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Full width на мобилке, по контенту на десктопе — правило вёрстки проекта */
+.fullWidth {
+  width: 100%;
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.secondary {
+  background-color: var(--color-surface);
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: var(--color-surface-muted);
+}
+
+.danger {
+  background-color: var(--color-danger);
+  color: var(--color-on-primary);
+}
+
+.danger:hover:not(:disabled) {
+  background-color: var(--color-danger-hover);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--color-text-muted);
+  padding: 0 var(--space-sm);
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+.iconOnly {
+  min-width: var(--control-height);
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .fullWidth {
+    width: auto;
+  }
+}

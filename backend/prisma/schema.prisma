@@ -1,0 +1,51 @@
+// Quiz Builder — normalized schema: Quiz -> Question -> Option.
+// Exactly one answer field is populated per question, depending on its type;
+// the others stay null/empty. See CLAUDE.md -> Data model.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum QuestionType {
+  BOOLEAN // True/False radio
+  INPUT // short text answer
+  CHECKBOX // multiple choice, several correct
+}
+
+model Quiz {
+  id        String     @id @default(uuid())
+  title     String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  questions Question[]
+}
+
+model Question {
+  id             String       @id @default(uuid())
+  quizId         String
+  quiz           Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  type           QuestionType
+  text           String
+  order          Int
+  correctBoolean Boolean? // BOOLEAN only
+  correctText    String? // INPUT only
+  options        Option[] // CHECKBOX only
+
+  @@index([quizId])
+}
+
+model Option {
+  id         String   @id @default(uuid())
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  text       String
+  isCorrect  Boolean  @default(false)
+  order      Int
+
+  @@index([questionId])
+}
