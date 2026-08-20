@@ -5,11 +5,12 @@
 
 ---
 
-## Этап 1 — Инфраструктура
+## Этап 1 — Инфраструктура ✅
 
-- [ ] `docker-compose.yml` с PostgreSQL 16 (healthcheck, named volume)
-- [ ] Корневой `.gitignore`: `node_modules`, `.env`, `.env.local`, `.next`, `dist`
-- [ ] Заглушка корневого `README.md`
+- [x] `docker-compose.yml` с PostgreSQL 16 (healthcheck, named volume)
+- [x] Корневой `.gitignore`: `node_modules`, `.env`, `.env.local`, `.next`, `dist`
+- [x] Заглушка корневого `README.md`
+- [x] Проверено: контейнер поднимается, healthcheck зелёный, подключение к БД работает
 
 ## Этап 2 — Backend
 
