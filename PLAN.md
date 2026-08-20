@@ -14,7 +14,7 @@
 
 ## Этап 2 — Backend
 
-- [ ] `nest new backend`, вычистить шаблон (удалить `app.controller.ts` / `app.service.ts`)
+- [x] `nest new backend`, вычистить шаблон (удалить `app.controller.ts` / `app.service.ts`)
 - [ ] Установить и настроить Prisma, описать `schema.prisma`
 - [ ] Первая миграция: `npx prisma migrate dev --name init`
 - [ ] `PrismaService` с `onModuleInit` + `PrismaModule`
@@ -30,7 +30,7 @@
 
 ## Этап 3 — Frontend
 
-- [ ] `create-next-app` (TypeScript, App Router, **без** Tailwind), вычистить шаблон
+- [x] `create-next-app` (TypeScript, App Router, **без** Tailwind), вычистить шаблон
 - [ ] `styles/reset.css` + `styles/tokens.css`, подключить в `layout.tsx`
 - [ ] UI-примитивы: `Button`, `TextInput`, `Field`, `Card` — каждый со своим `.module.css`
 - [ ] `services/http.ts` + `services/quizzes.ts`

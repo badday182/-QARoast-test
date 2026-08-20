@@ -1,7 +1,7 @@
 {
-  "name": "backend",
+  "name": "quiz-builder-backend",
   "version": "0.0.1",
-  "description": "",
+  "description": "Quiz Builder API — NestJS + Prisma + PostgreSQL",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
