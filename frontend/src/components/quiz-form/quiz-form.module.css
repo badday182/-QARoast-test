@@ -1,0 +1,99 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.questionsHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.legend {
+  font-size: var(--font-h2);
+  font-weight: var(--weight-semibold);
+}
+
+.counter {
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+}
+
+.questionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+}
+
+.questionNumber {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.questionBody {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+/* Тот же вид, что у TextInput — нативный select без своего примитива */
+.select {
+  width: 100%;
+  min-height: var(--control-height);
+  padding: 0 var(--space-sm);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  font-size: var(--font-body);
+  color: var(--color-text);
+  transition: border-color var(--transition);
+}
+
+.select:hover {
+  border-color: var(--color-primary);
+}
+
+.removeIcon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.formError {
+  color: var(--color-danger);
+}
+
+.arrayError {
+  font-size: var(--font-sm);
+  color: var(--color-danger);
+}
+
+@media (min-width: 768px) {
+  .questionBody {
+    /* minmax(0, …) — иначе длинный текст растянет колонку и появится горизонтальный скролл */
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+
+  .actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

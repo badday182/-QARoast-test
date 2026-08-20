@@ -12,7 +12,7 @@
 - [x] Заглушка корневого `README.md`
 - [x] Проверено: контейнер поднимается, healthcheck зелёный, подключение к БД работает
 
-## Этап 2 — Backend
+## Этап 2 — Backend ✅
 
 - [x] `nest new backend`, вычистить шаблон (удалить `app.controller.ts` / `app.service.ts`)
 - [x] Установить и настроить Prisma, описать `schema.prisma`
@@ -22,23 +22,23 @@
 - [x] Zod-схемы в `quizzes/schemas/`, DTO-типы через `z.infer`
 - [x] `QuizzesService` — четыре метода, `NotFoundException` на несуществующий id
 - [x] `QuizzesController` — четыре роута, `@HttpCode(204)` на delete
-- [ ] `main.ts`: CORS для `localhost:3000`, `ConfigModule`, порт из `.env`, **без глобального префикса**
-- [ ] `prisma/seed.ts` + скрипт `db:seed`, прогнать
-- [ ] Ручная проверка всех эндпоинтов (включая 404 и 204)
-- [ ] ESLint + Prettier, `npm run lint` без ошибок
-- [ ] `.env.example`
+- [x] `main.ts`: CORS для `localhost:3000`, `ConfigModule`, порт из `.env`, **без глобального префикса**
+- [x] `prisma/seed.ts` + скрипт `db:seed`, прогнать
+- [x] Ручная проверка всех эндпоинтов (включая 404 и 204)
+- [x] ESLint + Prettier, `npm run lint` без ошибок
+- [x] `.env.example`
 
 ## Этап 3 — Frontend
 
 - [x] `create-next-app` (TypeScript, App Router, **без** Tailwind), вычистить шаблон
 - [x] `styles/reset.css` + `styles/tokens.css`, подключить в `layout.tsx`
 - [x] UI-примитивы: `Button`, `TextInput`, `Field`, `Card` — каждый со своим `.module.css`
-- [ ] `services/http.ts` + `services/quizzes.ts`
-- [ ] `app/page.tsx` — редирект на `/quizzes`
-- [ ] Страница `/quizzes` — Server Component, `cache: 'no-store'`, empty-state
-- [ ] Карточка квиза: заголовок, число вопросов, ссылка на детали
-- [ ] Иконка удаления (inline SVG, `aria-label`) — Client Component, `DELETE` + `router.refresh()`
-- [ ] Страница `/create` — RHF + `zodResolver`, `useFieldArray` для вопросов (add/remove)
+- [x] `services/http.ts` + `services/quizzes.ts`
+- [x] `app/page.tsx` — редирект на `/quizzes`
+- [x] Страница `/quizzes` — Server Component, `cache: 'no-store'`, empty-state
+- [x] Карточка квиза: заголовок, число вопросов, ссылка на детали
+- [x] Иконка удаления (inline SVG, `aria-label`) — Client Component, `DELETE` + `router.refresh()`
+- [x] Страница `/create` — RHF + `zodResolver`, `useFieldArray` для вопросов (add/remove)
 - [ ] Редактор ответа для трёх типов; вложенный `useFieldArray` для опций CHECKBOX
 - [ ] Сабмит на `POST /quizzes` + редирект на `/quizzes/:id`
 - [ ] Страница `/quizzes/[id]` — read-only рендер трёх типов, `notFound()` на 404

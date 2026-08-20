@@ -1,0 +1,36 @@
+.card {
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-xs);
+}
+
+.title {
+  font-size: var(--font-h3);
+  font-weight: var(--weight-semibold);
+  /* min-width: 0 не даёт длинному заголовку распереть flex-строку */
+  min-width: 0;
+}
+
+.titleLink {
+  color: var(--color-text);
+}
+
+.titleLink:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.meta {
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: var(--space-xs);
+}
