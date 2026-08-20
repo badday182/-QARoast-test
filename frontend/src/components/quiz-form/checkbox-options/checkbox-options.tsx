@@ -6,7 +6,7 @@ import { Button, CrossIcon, TextInput } from '@/components/ui';
 import type { CreateQuizInput } from '@/lib/validation/quiz.schema';
 
 import styles from './checkbox-options.module.css';
-import { useQuestionErrors } from './question-errors';
+import { useQuestionErrors } from '../question-errors';
 
 const MIN_OPTIONS = 2;
 const MAX_OPTIONS = 10;

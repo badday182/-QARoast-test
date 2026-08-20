@@ -9,8 +9,8 @@ import type {
 } from '@/lib/validation/quiz.schema';
 
 import styles from './answer-editor.module.css';
-import { CheckboxOptions } from './checkbox-options';
-import { useQuestionErrors } from './question-errors';
+import { CheckboxOptions } from '../checkbox-options/checkbox-options';
+import { useQuestionErrors } from '../question-errors';
 
 type AnswerEditorProps = {
   index: number;

@@ -1,7 +1,7 @@
 import { ButtonLink, Notice } from '@/components/ui';
 import type { QuizListItem } from '@/services/quizzes';
 
-import { QuizCard } from './quiz-card';
+import { QuizCard } from '../quiz-card/quiz-card';
 import styles from './quiz-list.module.css';
 
 type QuizListProps = {

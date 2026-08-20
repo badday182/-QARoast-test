@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { QuizForm } from '@/components/quiz-form/quiz-form';
+import { QuizForm } from '@/components/quiz-form/quiz-form/quiz-form';
 
 import styles from './page.module.css';
 

@@ -1,4 +1,4 @@
-import { QuizList } from '@/components/quiz-list/quiz-list';
+import { QuizList } from '@/components/quiz-list/quiz-list/quiz-list';
 import { ButtonLink, Notice } from '@/components/ui';
 import { ApiError } from '@/services/http';
 import { fetchQuizzes, type QuizListItem } from '@/services/quizzes';

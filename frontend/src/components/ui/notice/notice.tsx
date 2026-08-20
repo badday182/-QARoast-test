@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 import { cx } from '@/lib/cx';
 
-import { Card } from './card';
+import { Card } from '../card/card';
 import styles from './notice.module.css';
 
 type NoticeProps = {

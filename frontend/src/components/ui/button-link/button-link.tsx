@@ -3,8 +3,7 @@ import type { ComponentPropsWithRef } from 'react';
 
 import { cx } from '@/lib/cx';
 
-// Осознанно делит стили с Button: кнопка-ссылка должна выглядеть точно так же.
-import styles from './button.module.css';
+import buttonStyles from '../button/button.module.css';
 
 type ButtonLinkProps = ComponentPropsWithRef<typeof Link> & {
   variant?: 'primary' | 'secondary' | 'ghost';
@@ -25,9 +24,9 @@ export function ButtonLink({
   return (
     <Link
       className={cx(
-        styles.button,
-        styles[variant],
-        fullWidth && styles.fullWidth,
+        buttonStyles.button,
+        buttonStyles[variant],
+        fullWidth && buttonStyles.fullWidth,
         className,
       )}
       {...props}

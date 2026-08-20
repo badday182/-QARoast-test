@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-import { Card } from '@/components/ui';
+import { Card } from '@/components/ui/card/card';
 import type { QuizListItem } from '@/services/quizzes';
 
-import { DeleteQuizButton } from './delete-quiz-button';
+import { DeleteQuizButton } from '../delete-quiz-button/delete-quiz-button';
 import styles from './quiz-card.module.css';
 
 type QuizCardProps = {

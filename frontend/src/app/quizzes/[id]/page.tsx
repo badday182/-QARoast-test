@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { QuestionAnswer } from '@/components/quiz-detail/question-answer';
+import { QuestionAnswer } from '@/components/quiz-detail/question-answer/question-answer';
 import { Card, Notice } from '@/components/ui';
 import { QUESTION_TYPE_LABELS } from '@/lib/question-types';
 import { ApiError } from '@/services/http';

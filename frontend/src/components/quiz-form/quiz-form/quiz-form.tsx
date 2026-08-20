@@ -24,7 +24,7 @@ import {
 import { ApiError } from '@/services/http';
 import { createQuiz } from '@/services/quizzes';
 
-import { AnswerEditor } from './answer-editor';
+import { AnswerEditor } from '../answer-editor/answer-editor';
 import styles from './quiz-form.module.css';
 
 const MAX_QUESTIONS = 50;
