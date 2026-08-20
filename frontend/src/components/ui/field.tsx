@@ -1,8 +1,8 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import { cx } from "@/lib/cx";
+import { cx } from '@/lib/cx';
 
-import styles from "./field.module.css";
+import styles from './field.module.css';
 
 type FieldProps = {
   label: string;
@@ -39,7 +39,7 @@ export function Field({
         {label}
         {required && (
           <span className={styles.required} aria-hidden="true">
-            {" *"}
+            {' *'}
           </span>
         )}
       </label>

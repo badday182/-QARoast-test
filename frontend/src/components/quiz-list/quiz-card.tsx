@@ -1,17 +1,17 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { Card } from "@/components/ui";
-import type { QuizListItem } from "@/services/quizzes";
+import { Card } from '@/components/ui';
+import type { QuizListItem } from '@/services/quizzes';
 
-import { DeleteQuizButton } from "./delete-quiz-button";
-import styles from "./quiz-card.module.css";
+import { DeleteQuizButton } from './delete-quiz-button';
+import styles from './quiz-card.module.css';
 
 type QuizCardProps = {
   quiz: QuizListItem;
 };
 
 function pluralizeQuestions(count: number): string {
-  return `${count} ${count === 1 ? "question" : "questions"}`;
+  return `${count} ${count === 1 ? 'question' : 'questions'}`;
 }
 
 export function QuizCard({ quiz }: QuizCardProps) {

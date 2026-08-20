@@ -1,0 +1,29 @@
+.notice {
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-h3);
+  font-weight: var(--weight-semibold);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  max-width: 48ch;
+  color: var(--color-text-muted);
+}
+
+.error {
+  border-color: var(--color-danger);
+  background-color: var(--color-danger-soft);
+}
+
+.error .title {
+  color: var(--color-danger);
+}

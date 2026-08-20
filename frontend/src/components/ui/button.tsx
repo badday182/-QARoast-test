@@ -1,12 +1,12 @@
-import type { ComponentPropsWithRef } from "react";
+import type { ComponentPropsWithRef } from 'react';
 
-import { cx } from "@/lib/cx";
+import { cx } from '@/lib/cx';
 
-import styles from "./button.module.css";
+import styles from './button.module.css';
 
-type ButtonVariant = "primary" | "secondary" | "danger" | "ghost";
+type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'ghost';
 
-type ButtonProps = ComponentPropsWithRef<"button"> & {
+type ButtonProps = ComponentPropsWithRef<'button'> & {
   variant?: ButtonVariant;
   /** Во всю ширину на мобилке, по содержимому от 768px. */
   fullWidth?: boolean;
@@ -15,10 +15,10 @@ type ButtonProps = ComponentPropsWithRef<"button"> & {
 };
 
 export function Button({
-  variant = "primary",
+  variant = 'primary',
   fullWidth = false,
   iconOnly = false,
-  type = "button",
+  type = 'button',
   className,
   ...props
 }: ButtonProps) {

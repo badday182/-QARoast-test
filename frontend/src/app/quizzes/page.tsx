@@ -1,16 +1,16 @@
-import { QuizList } from "@/components/quiz-list/quiz-list";
-import { ButtonLink, Card } from "@/components/ui";
-import { ApiError } from "@/services/http";
-import { fetchQuizzes, type QuizListItem } from "@/services/quizzes";
+import { QuizList } from '@/components/quiz-list/quiz-list';
+import { ButtonLink, Notice } from '@/components/ui';
+import { ApiError } from '@/services/http';
+import { fetchQuizzes, type QuizListItem } from '@/services/quizzes';
 
-import styles from "./page.module.css";
+import styles from './page.module.css';
 
 export const metadata = {
-  title: "Quizzes — Quiz Builder",
+  title: 'Quizzes — Quiz Builder',
 };
 
 export default async function QuizzesPage() {
-  let quizzes: QuizListItem[] | null = null;
+  let quizzes: QuizListItem[] = [];
   let error: string | null = null;
 
   try {
@@ -18,8 +18,8 @@ export default async function QuizzesPage() {
   } catch (cause) {
     error =
       cause instanceof ApiError && cause.isOffline
-        ? "The API is unreachable. Start the backend on port 4000 and reload the page."
-        : "Could not load the quizzes. Please try again.";
+        ? 'The API is unreachable. Start the backend on port 4000 and reload the page.'
+        : 'Could not load the quizzes. Please try again.';
   }
 
   return (
@@ -27,7 +27,9 @@ export default async function QuizzesPage() {
       <header className={styles.header}>
         <div>
           <h1 className={styles.title}>Quizzes</h1>
-          <p className={styles.subtitle}>Browse the quizzes you have created.</p>
+          <p className={styles.subtitle}>
+            Browse the quizzes you have created.
+          </p>
         </div>
         <ButtonLink href="/create" fullWidth>
           New quiz
@@ -35,12 +37,11 @@ export default async function QuizzesPage() {
       </header>
 
       {error ? (
-        <Card as="section" className={styles.error}>
-          <p className={styles.errorTitle}>Something went wrong</p>
-          <p className={styles.errorText}>{error}</p>
-        </Card>
+        <Notice title="Something went wrong" tone="error">
+          {error}
+        </Notice>
       ) : (
-        <QuizList quizzes={quizzes ?? []} />
+        <QuizList quizzes={quizzes} />
       )}
     </main>
   );

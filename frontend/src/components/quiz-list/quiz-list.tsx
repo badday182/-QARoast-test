@@ -1,10 +1,8 @@
-import Link from "next/link";
+import { ButtonLink, Notice } from '@/components/ui';
+import type { QuizListItem } from '@/services/quizzes';
 
-import { Card } from "@/components/ui";
-import type { QuizListItem } from "@/services/quizzes";
-
-import { QuizCard } from "./quiz-card";
-import styles from "./quiz-list.module.css";
+import { QuizCard } from './quiz-card';
+import styles from './quiz-list.module.css';
 
 type QuizListProps = {
   quizzes: QuizListItem[];
@@ -13,13 +11,15 @@ type QuizListProps = {
 export function QuizList({ quizzes }: QuizListProps) {
   if (quizzes.length === 0) {
     return (
-      <Card as="section" className={styles.empty}>
-        <p className={styles.emptyTitle}>No quizzes yet</p>
-        <p className={styles.emptyText}>
-          Create your first quiz — add a title and as many questions as you need.
+      <Notice title="No quizzes yet">
+        <p>
+          Create your first quiz — add a title and as many questions as you
+          need.
         </p>
-        <Link href="/create">Create a quiz</Link>
-      </Card>
+        <ButtonLink href="/create" variant="secondary">
+          Create a quiz
+        </ButtonLink>
+      </Notice>
     );
   }
 

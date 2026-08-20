@@ -39,12 +39,12 @@
 - [x] Карточка квиза: заголовок, число вопросов, ссылка на детали
 - [x] Иконка удаления (inline SVG, `aria-label`) — Client Component, `DELETE` + `router.refresh()`
 - [x] Страница `/create` — RHF + `zodResolver`, `useFieldArray` для вопросов (add/remove)
-- [ ] Редактор ответа для трёх типов; вложенный `useFieldArray` для опций CHECKBOX
-- [ ] Сабмит на `POST /quizzes` + редирект на `/quizzes/:id`
-- [ ] Страница `/quizzes/[id]` — read-only рендер трёх типов, `notFound()` на 404
-- [ ] Состояния: loading, ошибка запроса, пустой список
-- [ ] ESLint + Prettier, `npm run lint` без ошибок
-- [ ] `.env.local.example`
+- [x] Редактор ответа для трёх типов; вложенный `useFieldArray` для опций CHECKBOX
+- [x] Сабмит на `POST /quizzes` + редирект на `/quizzes/:id`
+- [x] Страница `/quizzes/[id]` — read-only рендер трёх типов, `notFound()` на 404
+- [x] Состояния: loading, ошибка запроса, пустой список
+- [x] ESLint + Prettier, `npm run lint` без ошибок
+- [x] `.env.local.example`
 
 ## Этап 4 — Отделка
 

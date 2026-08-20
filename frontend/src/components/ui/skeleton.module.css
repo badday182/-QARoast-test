@@ -1,0 +1,17 @@
+.skeleton {
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+/* prefers-reduced-motion гасит анимацию глобально — см. styles/reset.css */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.55;
+  }
+}

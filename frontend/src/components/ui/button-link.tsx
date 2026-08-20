@@ -1,13 +1,13 @@
-import Link from "next/link";
-import type { ComponentPropsWithRef } from "react";
+import Link from 'next/link';
+import type { ComponentPropsWithRef } from 'react';
 
-import { cx } from "@/lib/cx";
+import { cx } from '@/lib/cx';
 
 // Осознанно делит стили с Button: кнопка-ссылка должна выглядеть точно так же.
-import styles from "./button.module.css";
+import styles from './button.module.css';
 
 type ButtonLinkProps = ComponentPropsWithRef<typeof Link> & {
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: 'primary' | 'secondary' | 'ghost';
   /** Во всю ширину на мобилке, по содержимому от 768px. */
   fullWidth?: boolean;
 };
@@ -17,14 +17,19 @@ type ButtonLinkProps = ComponentPropsWithRef<typeof Link> & {
  * это невалидная разметка и ломает навигацию с клавиатуры.
  */
 export function ButtonLink({
-  variant = "primary",
+  variant = 'primary',
   fullWidth = false,
   className,
   ...props
 }: ButtonLinkProps) {
   return (
     <Link
-      className={cx(styles.button, styles[variant], fullWidth && styles.fullWidth, className)}
+      className={cx(
+        styles.button,
+        styles[variant],
+        fullWidth && styles.fullWidth,
+        className,
+      )}
       {...props}
     />
   );

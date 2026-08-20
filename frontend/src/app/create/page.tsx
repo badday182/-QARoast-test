@@ -1,11 +1,11 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { QuizForm } from "@/components/quiz-form/quiz-form";
+import { QuizForm } from '@/components/quiz-form/quiz-form';
 
-import styles from "./page.module.css";
+import styles from './page.module.css';
 
 export const metadata = {
-  title: "New quiz — Quiz Builder",
+  title: 'New quiz — Quiz Builder',
 };
 
 export default function CreateQuizPage() {
@@ -16,7 +16,9 @@ export default function CreateQuizPage() {
           ← Back to quizzes
         </Link>
         <h1 className={styles.title}>New quiz</h1>
-        <p className={styles.subtitle}>Give the quiz a title and add at least one question.</p>
+        <p className={styles.subtitle}>
+          Give the quiz a title and add at least one question.
+        </p>
       </header>
 
       <QuizForm />

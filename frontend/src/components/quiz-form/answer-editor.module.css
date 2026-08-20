@@ -1,0 +1,35 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.legend {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-medium);
+  line-height: var(--line-tight);
+  color: var(--color-text);
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  padding-top: var(--space-2xs);
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  /* Тач-таргет: вся подпись кликабельна и не ниже 44px */
+  min-height: var(--control-height);
+  cursor: pointer;
+}
+
+.radio {
+  width: 1.125rem;
+  height: 1.125rem;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}

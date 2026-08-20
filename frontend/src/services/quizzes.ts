@@ -1,6 +1,9 @@
-import type { CreateQuizInput, QuestionType } from "@/lib/validation/quiz.schema";
+import type {
+  CreateQuizInput,
+  QuestionType,
+} from '@/lib/validation/quiz.schema';
 
-import { http } from "./http";
+import { http } from './http';
 
 export type QuizListItem = {
   id: string;
@@ -35,17 +38,17 @@ export type QuizDetail = {
 
 /** GET /quizzes */
 export function fetchQuizzes(): Promise<QuizListItem[]> {
-  return http.get<QuizListItem[]>("/quizzes", { cache: "no-store" });
+  return http.get<QuizListItem[]>('/quizzes', { cache: 'no-store' });
 }
 
 /** GET /quizzes/:id — бросает ApiError со status 404, если квиза нет. */
 export function fetchQuiz(id: string): Promise<QuizDetail> {
-  return http.get<QuizDetail>(`/quizzes/${id}`, { cache: "no-store" });
+  return http.get<QuizDetail>(`/quizzes/${id}`, { cache: 'no-store' });
 }
 
 /** POST /quizzes */
 export function createQuiz(input: CreateQuizInput): Promise<{ id: string }> {
-  return http.post<{ id: string }>("/quizzes", input);
+  return http.post<{ id: string }>('/quizzes', input);
 }
 
 /** DELETE /quizzes/:id */
