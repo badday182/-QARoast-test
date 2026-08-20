@@ -30,8 +30,8 @@ import styles from './quiz-form.module.css';
 const MAX_QUESTIONS = 50;
 
 /**
- * Заготовка вопроса под конкретный тип. У каждого типа своё поле ответа,
- * поэтому при смене типа объект заменяется целиком, а не патчится.
+ * Заготовка запитання під конкретний тип. У кожного типу своє поле відповіді,
+ * тому при зміні типу об'єкт замінюється цілком, а не патчиться.
  */
 function emptyQuestion(type: QuestionType, text = ''): QuestionInput {
   switch (type) {
@@ -97,7 +97,7 @@ export function QuizForm() {
   }
 
   const titleError = errors.title?.message;
-  // Ошибка самого массива (пусто / больше 50), а не отдельного вопроса
+  // Помилка самого масиву (порожньо / більше 50), а не окремого запитання
   const questionsError =
     errors.questions?.root?.message ?? errors.questions?.message;
 
@@ -184,10 +184,10 @@ export function QuizForm() {
                         className={styles.select}
                         value={field.type}
                         onChange={(event) => {
-                          // Замена вопроса целиком: поля ответа у типов не
-                          // пересекаются. Текст читаем через getValues: в
-                          // field он остаётся тем, что был на последнем
-                          // рендере useFieldArray, а не тем, что набрали.
+                          // Заміна запитання цілком: поля відповіді у типів не
+                          // перетинаються. Текст читаємо через getValues: у
+                          // field він лишається тим, що був на останньому
+                          // рендері useFieldArray, а не тим, що набрали.
                           update(
                             index,
                             emptyQuestion(

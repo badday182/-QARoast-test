@@ -7,13 +7,13 @@ import buttonStyles from '../button/button.module.css';
 
 type ButtonLinkProps = ComponentPropsWithRef<typeof Link> & {
   variant?: 'primary' | 'secondary' | 'ghost';
-  /** Во всю ширину на мобилке, по содержимому от 768px. */
+  /** На всю ширину на мобілці, по вмісту від 768px. */
   fullWidth?: boolean;
 };
 
 /**
- * Ссылка в оформлении кнопки. Нужна, чтобы не вкладывать <button> в <a> —
- * это невалидная разметка и ломает навигацию с клавиатуры.
+ * Посилання в оформленні кнопки. Потрібне, щоб не вкладати <button> в <a> —
+ * це невалідна розмітка і ламає навігацію з клавіатури.
  */
 export function ButtonLink({
   variant = 'primary',

@@ -22,7 +22,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2xs);
-  /* Тач-таргет: вся подпись кликабельна и не ниже 44px */
+  /* Тач-таргет: весь підпис клікабельний і не нижче 44px */
   min-height: var(--control-height);
   cursor: pointer;
 }

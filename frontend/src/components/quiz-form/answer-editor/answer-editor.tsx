@@ -20,8 +20,8 @@ type AnswerEditorProps = {
 const BOOLEAN_CHOICES = [true, false] as const;
 
 /**
- * Поле ответа зависит от типа вопроса. Добавляется тип — правится и этот
- * switch, и Prisma-enum, и Zod-схема, и рендер деталей (см. CLAUDE.md).
+ * Поле відповіді залежить від типу запитання. Додається тип — правиться і цей
+ * switch, і Prisma-enum, і Zod-схема, і рендер деталей (див. CLAUDE.md).
  */
 export function AnswerEditor({ index, type }: AnswerEditorProps) {
   const { control, register } = useFormContext<CreateQuizInput>();

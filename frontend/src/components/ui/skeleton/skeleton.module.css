@@ -4,7 +4,7 @@
   animation: pulse 1.4s ease-in-out infinite;
 }
 
-/* prefers-reduced-motion гасит анимацию глобально — см. styles/reset.css */
+/* prefers-reduced-motion гасить анімацію глобально — див. styles/reset.css */
 @keyframes pulse {
   0%,
   100% {

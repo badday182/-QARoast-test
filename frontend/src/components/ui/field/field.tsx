@@ -6,7 +6,7 @@ import styles from './field.module.css';
 
 type FieldProps = {
   label: string;
-  /** id контрола внутри. Из него же строятся id подсказки и ошибки. */
+  /** id контролу всередині. З нього ж будуються id підказки та помилки. */
   htmlFor: string;
   children: ReactNode;
   hint?: string;
@@ -15,7 +15,7 @@ type FieldProps = {
   className?: string;
 };
 
-/** id описаний поля — контрол должен сослаться на них через aria-describedby. */
+/** id описів поля — контрол має посилатися на них через aria-describedby. */
 export function fieldHintId(htmlFor: string): string {
   return `${htmlFor}-hint`;
 }

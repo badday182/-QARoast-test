@@ -8,9 +8,9 @@ type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'ghost';
 
 type ButtonProps = ComponentPropsWithRef<'button'> & {
   variant?: ButtonVariant;
-  /** Во всю ширину на мобилке, по содержимому от 768px. */
+  /** На всю ширину на мобілці, по вмісту від 768px. */
   fullWidth?: boolean;
-  /** Квадратная кнопка под одну иконку — требует aria-label. */
+  /** Квадратна кнопка під одну іконку — вимагає aria-label. */
   iconOnly?: boolean;
 };
 

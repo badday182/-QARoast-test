@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
 /**
- * Зеркало backend/src/quizzes/schemas/quiz.schema.ts.
- * Копия намеренная — общий пакет здесь не окупается.
- * Меняешь одну сторону — меняй вторую тем же коммитом.
+ * Дзеркало backend/src/quizzes/schemas/quiz.schema.ts.
+ * Копія навмисна — спільний пакет тут не окупається.
+ * Змінюєш одну сторону — зміни й другу тим самим комітом.
  */
 
 export const QUESTION_TYPES = ['BOOLEAN', 'INPUT', 'CHECKBOX'] as const;

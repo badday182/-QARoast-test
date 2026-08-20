@@ -27,7 +27,7 @@ const eslintConfig = [
     rules: {
       // CLAUDE.md: no `any` outside narrowly-scoped casts.
       '@typescript-eslint/no-explicit-any': 'error',
-      // Windows-чекауты дают CRLF — иначе весь файл красный.
+      // Windows-чекаути дають CRLF — інакше весь файл червоний.
       'prettier/prettier': ['error', { endOfLine: 'auto' }],
     },
   },

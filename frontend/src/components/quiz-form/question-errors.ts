@@ -3,11 +3,11 @@ import { useFormContext } from 'react-hook-form';
 import type { CreateQuizInput } from '@/lib/validation/quiz.schema';
 
 /**
- * Ошибки одного вопроса.
+ * Помилки одного запитання.
  *
- * questions[] — массив discriminated union, поэтому RHF типизирует ветку ошибок
- * по общим полям union'а: до `correctText` / `options` через неё не добраться.
- * Сужаем один раз здесь, чтобы каст не расползался по компонентам.
+ * questions[] — масив discriminated union, тому RHF типізує гілку помилок
+ * за спільними полями union'у: до `correctText` / `options` через неї не дістатися.
+ * Звужуємо один раз тут, щоб каст не розповзався по компонентах.
  */
 type FieldError = { message?: string };
 
@@ -24,7 +24,7 @@ export type QuestionErrors = {
   text?: string;
   correctBoolean?: string;
   correctText?: string;
-  /** Ошибка всего набора опций: меньше двух, больше десяти, ни одной верной. */
+  /** Помилка всього набору опцій: менше двох, більше десяти, жодної вірної. */
   optionsGroup?: string;
   optionText: (optionIndex: number) => string | undefined;
 };

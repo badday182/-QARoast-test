@@ -15,7 +15,7 @@ type CheckboxOptionsProps = {
   index: number;
 };
 
-/** Вложенный useFieldArray: опции живут внутри элемента массива вопросов. */
+/** Вкладений useFieldArray: опції живуть всередині елемента масиву запитань. */
 export function CheckboxOptions({ index }: CheckboxOptionsProps) {
   const { control, register } = useFormContext<CreateQuizInput>();
   const { fields, append, remove } = useFieldArray({

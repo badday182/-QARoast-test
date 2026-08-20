@@ -1,12 +1,12 @@
 /**
- * Тонкая обёртка над fetch. Единственное место, где известен адрес API
- * и формат ошибок NestJS.
+ * Тонка обгортка над fetch. Єдине місце, де відома адреса API
+ * та формат помилок NestJS.
  */
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
 
 export class ApiError extends Error {
-  /** HTTP-статус; 0 — до сервера не достучались. */
+  /** HTTP-статус; 0 — до сервера не достукались. */
   readonly status: number;
 
   constructor(message: string, status: number) {
@@ -27,15 +27,15 @@ export class ApiError extends Error {
 type RequestOptions = {
   method?: 'GET' | 'POST' | 'DELETE';
   body?: unknown;
-  /** GET-запросы читают свежие данные: список меняется после create/delete. */
+  /** GET-запити читають свіжі дані: список змінюється після create/delete. */
   cache?: RequestCache;
   signal?: AbortSignal;
 };
 
 /**
- * Nest отдаёт { statusCode, error, message }, а ZodValidationPipe добавляет
- * errors: [{ path, message }] — без них ошибка валидации схлопывается
- * в бесполезное «Validation failed».
+ * Nest віддає { statusCode, error, message }, а ZodValidationPipe додає
+ * errors: [{ path, message }] — без них помилка валідації згортається
+ * у марне «Validation failed».
  */
 async function readErrorMessage(response: Response): Promise<string> {
   try {
@@ -67,7 +67,7 @@ async function readErrorMessage(response: Response): Promise<string> {
       if (typeof message === 'string') return message;
     }
   } catch {
-    // тело пустое или не JSON — обойдёмся статусом
+    // тіло порожнє або не JSON — обійдемось статусом
   }
 
   return `${response.status} ${response.statusText}`.trim();
@@ -101,7 +101,7 @@ async function request<T>(
     throw new ApiError(await readErrorMessage(response), response.status);
   }
 
-  // 204 No Content и пустое тело — возвращать нечего
+  // 204 No Content і порожнє тіло — повертати нічого
   if (
     response.status === 204 ||
     response.headers.get('content-length') === '0'

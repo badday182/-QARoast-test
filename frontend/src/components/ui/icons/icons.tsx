@@ -3,7 +3,7 @@ import { cx } from '@/lib/cx';
 import styles from './icons.module.css';
 
 type IconProps = {
-  /** Иконки декоративные: доступное имя живёт на кнопке-обёртке. */
+  /** Іконки декоративні: доступне ім'я живе на кнопці-обгортці. */
   className?: string;
 };
 

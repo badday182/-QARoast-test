@@ -3,13 +3,13 @@ import { cx } from '@/lib/cx';
 import styles from './skeleton.module.css';
 
 type SkeletonProps = {
-  /** Любая CSS-длина: 100%, 12ch, clamp(...). */
+  /** Будь-яка CSS-довжина: 100%, 12ch, clamp(...). */
   width?: string;
   height?: string;
   className?: string;
 };
 
-/** Заглушка контента на время загрузки. Скрыта от скринридеров — статус даёт родитель. */
+/** Заглушка контенту на час завантаження. Приховано від скринрідерів — статус дає батько. */
 export function Skeleton({
   width = '100%',
   height = '1rem',

@@ -20,8 +20,8 @@ function singleAnswer(question: QuizDetailQuestion): string {
 }
 
 /**
- * Read-only рендер ответа. Тип вопроса определяет, какое поле заполнено —
- * остальные приходят null/пустыми (см. модель данных в CLAUDE.md).
+ * Read-only рендер відповіді. Тип запитання визначає, яке поле заповнене —
+ * решта приходять null/порожніми (див. модель даних у CLAUDE.md).
  */
 export function QuestionAnswer({ question }: QuestionAnswerProps) {
   if (question.type === 'CHECKBOX') {

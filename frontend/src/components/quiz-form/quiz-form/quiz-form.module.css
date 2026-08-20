@@ -54,7 +54,7 @@
   grid-template-columns: 1fr;
 }
 
-/* Тот же вид, что у TextInput — нативный select без своего примитива */
+/* Той самий вигляд, що й у TextInput — нативний select без свого примітиву */
 .select {
   width: 100%;
   min-height: var(--control-height);
@@ -88,7 +88,7 @@
 
 @media (min-width: 768px) {
   .questionBody {
-    /* minmax(0, …) — иначе длинный текст растянет колонку и появится горизонтальный скролл */
+    /* minmax(0, …) — інакше довгий текст розтягне колонку і з'явиться горизонтальний скрол */
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   }
 

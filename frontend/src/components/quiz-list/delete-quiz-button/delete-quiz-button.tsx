@@ -30,7 +30,7 @@ export function DeleteQuizButton({ quizId, quizTitle }: DeleteQuizButtonProps) {
 
     try {
       await deleteQuiz(quizId);
-      // refresh перерисовывает Server Component списка без полной перезагрузки
+      // refresh перемальовує Server Component списку без повного перезавантаження
       startTransition(() => router.refresh());
     } catch (cause) {
       setError(

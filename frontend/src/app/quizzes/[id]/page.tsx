@@ -22,7 +22,7 @@ const dateFormat = new Intl.DateTimeFormat('en-GB', {
   timeZone: 'UTC',
 });
 
-/** notFound() бросает, поэтому наружу выходит либо квиз, либо текст ошибки. */
+/** notFound() кидає виняток, тому назовні виходить або квіз, або текст помилки. */
 async function loadQuiz(
   id: string,
 ): Promise<{ quiz: QuizDetail } | { error: string }> {

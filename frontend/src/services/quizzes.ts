@@ -41,7 +41,7 @@ export function fetchQuizzes(): Promise<QuizListItem[]> {
   return http.get<QuizListItem[]>('/quizzes', { cache: 'no-store' });
 }
 
-/** GET /quizzes/:id — бросает ApiError со status 404, если квиза нет. */
+/** GET /quizzes/:id — кидає ApiError зі status 404, якщо квізу немає. */
 export function fetchQuiz(id: string): Promise<QuizDetail> {
   return http.get<QuizDetail>(`/quizzes/${id}`, { cache: 'no-store' });
 }

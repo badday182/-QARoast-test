@@ -5,7 +5,7 @@ import { cx } from '@/lib/cx';
 import styles from './text-input.module.css';
 
 type TextInputProps = Omit<ComponentPropsWithRef<'input'>, 'type'> & {
-  /** Подсвечивает поле и проставляет aria-invalid. */
+  /** Підсвічує поле і проставляє aria-invalid. */
   invalid?: boolean;
 };
 
